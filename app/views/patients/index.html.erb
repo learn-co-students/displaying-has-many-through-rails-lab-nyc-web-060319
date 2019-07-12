@@ -1,0 +1,7 @@
+<h1>index</h1>
+
+<ul>
+<%Patient.all.each do |patient|%>
+    <li>Name: <%=patient.name%> Number of Appointments: <%=Appointment.where(patient_id: patient.id).length%></li>
+<%end%>
+</ul>
